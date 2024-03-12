@@ -1,0 +1,78 @@
+/* Globals */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --lightGray: #F8F9FA;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+* {
+  box-sizing: inherit;
+}
+
+body,
+body * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: var(--white);
+}
+
+p {
+  color: white;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+.container-property {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Nav */
+
+nav {
+  z-index: 1000;
+}
+
+.logo-img {
+  width: 1.5rem;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Carousel */
+
+/* .vh {
+  max-height: 100vh;
+} */
+
+/* Hero */
+
+.about-us-section {
+  background-color: var(--black);
+}
+
+/* About-us */
+
+/* .about-card {
+  width: 100%;
+} */
