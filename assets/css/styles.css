@@ -61,15 +61,18 @@ nav {
 
 .logo-img {
   width: 1.5rem;
-  background-color: transparent !important;
-  box-shadow: none !important;
+  /* background-color: transparent !important;
+  box-shadow: none !important; */
 }
 
-/* Carousel */
+.navbar {
+  transition: background-color 0.3s ease;
+}
 
-/* .vh {
-  max-height: 100vh;
-} */
+.bg-opacity {
+  background-color: var(--black);
+  opacity: 90%;
+}
 
 /* Hero */
 

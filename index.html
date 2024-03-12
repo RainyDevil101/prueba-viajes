@@ -20,14 +20,6 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
-        <!-- JQuery -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -62,18 +54,22 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#"
+                            <a class="nav-link" aria-current="page" href="#home"
                                 >Inicio</a
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link d-none d-md-block" href="#">¿Quiénes somos?</a>
+                            <a
+                                class="nav-link d-none d-md-block"
+                                href="#about-us"
+                                >¿Quiénes somos?</a
+                            >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Destacados</a>
+                            <a class="nav-link" href="#featured">Destacados</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="#contact">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -82,7 +78,7 @@
 
         <!-- Hero -->
 
-        <section>
+        <section id="home">
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -136,18 +132,18 @@
 
         <!-- About us -->
 
-        <section class="bg-section d-none d-md-block">
+        <section id="about-us" class="bg-section d-none d-md-block">
             <div class="container">
                 <h2 class="fw-light py-5 text-center">¿Quiénes somos?</h2>
                 <hr class="border opacity-50 mx-auto" />
-                <div class="row mx-5 gap-auto py-5">
+                <div class="row gap-auto py-5">
                     <div class="col-lg-4 col-12 mb-5">
-                        <div class="about-card__fa text-center bg-info">
+                        <div class="text-center bg-info">
                             <i
                                 class="fa-solid fa-plane text-white fs-1 py-1"
                             ></i>
                         </div>
-                        <div class="about-card__text">
+                        <div>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur
                                 adipisicing elit. Omnis officia libero, vitae
@@ -165,7 +161,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-12 mb-5">
-                        <div class="about-card__text">
+                        <div>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur
                                 adipisicing elit. Omnis officia libero, vitae
@@ -181,19 +177,19 @@
                                 Odit eius ducimus officia eligendi deserunt!
                             </p>
                         </div>
-                        <div class="about-card__fa text-center bg-info">
+                        <div class="text-center bg-info">
                             <i
                                 class="fa-solid fa-mountain text-white fs-1 py-1"
                             ></i>
                         </div>
                     </div>
                     <div class="col-lg-4 col-12 mb-5">
-                        <div class="about-card__fa text-center bg-info">
+                        <div class="text-center bg-info">
                             <i
                                 class="fa-solid fa-route text-white fs-1 py-1"
                             ></i>
                         </div>
-                        <div class="about-card__text">
+                        <div>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur
                                 adipisicing elit. Omnis officia libero, vitae
@@ -216,11 +212,11 @@
 
         <!-- Featured -->
 
-        <section class="bg-section">
+        <section id="featured" class="bg-section">
             <h2 class="fw-light py-5 text-center">Destacados</h2>
             <hr class="border opacity-50 mx-auto hr__width" />
             <div class="container">
-                <div class="row mx-5 gap-auto py-5">
+                <div class="row gap-auto py-5">
                     <div class="col-lg-3 col-12 mb-5">
                         <div class="card">
                             <img
@@ -307,10 +303,10 @@
 
         <!-- Contact me -->
 
-        <section class="bg-section">
+        <section id="contact" class="bg-section">
             <h2 class="fw-light py-5 text-center">Destacados</h2>
             <hr class="border opacity-50 mx-auto hr__width" />
-            <div class="container px-5">
+            <div class="container">
                 <form class="py-5">
                     <div class="mb-3">
                         <label for="name-form" class="form-label">Nombre</label>
@@ -341,7 +337,14 @@
                             rows="8"
                         ></textarea>
                     </div>
-                    <button type="submit" class="btn btn-info text-white">
+                    <button
+                        type="submit"
+                        class="btn btn-info text-white"
+                        id="sendEmail"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Presiona para enviar tu correo"
+                        data-bs-placement="bottom"
+                    >
                         Enviar
                     </button>
                 </form>
@@ -350,16 +353,35 @@
 
         <!-- Footer -->
         <footer class="bg-info p-4">
-          <div class="container px-5 d-md-flex justify-content-between align-items-center text-center">
-              <h2 class="fw-light mb-3 mb-md-0">Viajes Chile</h2>
-              <ul class="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-end">
-                  <li class="me-3 fs-3 mb-2"><i class="fa-brands fa-square-github"></i></li>
-                  <li class="me-3 fs-3 mb-2"><i class="fa-brands fa-linkedin"></i></li>
-                  <li class="me-3 fs-3 mb-2"><i class="fa-brands fa-twitter"></i></li>
-                  <li class="mb-2 fs-3"><i class="fa-brands fa-square-facebook"></i></li>
-              </ul>
-          </div>
-      </footer>
+            <div
+                class="container px-5 d-md-flex justify-content-between align-items-center text-center"
+            >
+                <h2 class="fw-light mb-3 mb-md-0">Viajes Chile</h2>
+                <ul
+                    class="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-end"
+                >
+                    <li class="me-3 fs-3 mb-2">
+                        <i class="fa-brands fa-square-github"></i>
+                    </li>
+                    <li class="me-3 fs-3 mb-2">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </li>
+                    <li class="me-3 fs-3 mb-2">
+                        <i class="fa-brands fa-twitter"></i>
+                    </li>
+                    <li class="mb-2 fs-3">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <!-- JQuery -->
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
 
         <!-- Bootstrap -->
         <script
