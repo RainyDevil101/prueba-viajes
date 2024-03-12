@@ -28,18 +28,24 @@ h1,
 h2,
 h3,
 p,
-a {
+a,
+label,
+li {
   color: var(--white);
 }
 
 p {
-  color: white;
+  text-wrap: pretty;
 }
 
 h1,
 h2,
 h3 {
   text-transform: uppercase;
+}
+
+.hr__width {
+  width: 90%;
 }
 
 .container-property {
@@ -67,12 +73,15 @@ nav {
 
 /* Hero */
 
-.about-us-section {
+.bg-section {
   background-color: var(--black);
 }
 
 /* About-us */
 
-/* .about-card {
-  width: 100%;
-} */
+.card-image {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 170px;
+}
