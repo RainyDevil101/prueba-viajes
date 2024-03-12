@@ -1,7 +1,7 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-$().ready(function () {
+$(document).ready(function () {
   // Smooth-scroll
   $('.smooth-scroll').on('click', function (event) {
     event.preventDefault();
